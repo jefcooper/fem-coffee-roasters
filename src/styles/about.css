@@ -1,0 +1,292 @@
+/****************** About Us ***********************/
+.about-us {
+  display: grid;
+  align-content: center;
+  gap: 1.5rem;
+
+  height: 400px;
+  margin-top: 2.5rem;
+  padding-inline: 1.5rem;
+  border-radius: 10px;
+
+  background-image: url(../assets/about/image-hero-whitecup-sm.jpg);
+  background-size: cover;
+
+  color: var(--clr-neutral-200);
+  text-align: center;
+}
+.about-us .heading--2 {
+  text-transform: capitalize;
+}
+
+/*************** Our Commitment ********************/
+.our-commitment {
+  margin-top: 7.5rem;
+
+  text-align: center;
+}
+.our-commitment__img {
+  height: 400px;
+  border-radius: 10px;
+
+  background-image: url(../assets/about/image-commitment-sm.jpg);
+  background-size: cover;
+}
+.our-commitment .heading--3 {
+  margin-top: 3rem;
+}
+.our-commitment .p {
+  margin-top: 1.875rem;
+}
+
+/************* Uncompromising Quality **************/
+.uncompromising-quality {
+  position: relative;
+
+  height: 509px;
+  margin-top: 12.375rem;
+
+  color: var(--clr-neutral-200);
+  text-align: center;
+}
+.uncompromising-quality::before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 509px;
+  border-radius: 10px;
+
+  background-image: url(../assets/about/bg-quality-sm.png);
+  background-size: cover;
+
+  content: "";
+}
+.uncompromising-quality__img {
+  height: 156px;
+  width: calc(100vw - 6rem);
+  margin-inline: 1.5rem;
+  border-radius: 8px;
+
+  background-image: url(../assets/about/image-quality-sm.jpg);
+  background-size: cover;
+
+  transform: translateY(-50%);
+}
+.uncompromising-quality .heading--2 {
+  margin-top: -1rem;
+  margin-inline: 1.5rem;
+}
+.uncompromising-quality .p {
+  margin-top: 1.5rem;
+  margin-inline: 1.5rem;
+}
+
+/***************** Headquarters ********************/
+.headquarters {
+  display: grid;
+  justify-items: center;
+
+  margin-top: 7.5rem;
+
+  color: var(--clr-neutral-700);
+}
+.headquarters__list {
+  display: grid;
+  justify-content: center;
+}
+.headquarters__list li {
+  margin-top: 4.5rem;
+
+  color: var(--clr-neutral-900);
+  text-align: center;
+}
+.headquarters__list .heading--2 {
+  margin-top: 3.1875rem;
+  margin-bottom: 1.6875rem;
+}
+
+/*
+  Tablet Form Factor
+ */
+@media screen and (min-width: 768px) {
+  .menu__backdrop {
+    padding-top: 2.5rem;
+  }
+  .about-us {
+    margin-top: 3.3125rem;
+    padding-left: 3.625rem;
+
+    background-image: url(../assets/about/image-hero-whitecup-md.jpg);
+
+    text-align: left;
+  }
+  .about-us .heading--2 {
+    font-size: 2rem;
+    line-height: 3rem;
+    letter-spacing: 2px;
+  }
+  .about-us .p {
+    width: 48ch;
+
+    opacity: 80%;
+  }
+  .our-commitment {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
+    grid-column-gap: 4.3125rem;
+
+    margin-top: 9rem;
+
+    text-align: left;
+  }
+  .our-commitment__img {
+    grid-row: 1 / -1;
+
+    width: 281px;
+    height: 470px;
+
+    background-image: url(../assets/about/image-commitment-md.jpg);
+    background-size: cover;
+  }
+  .our-commitment .heading--3 {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    line-height: 1;
+  }
+  .our-commitment .p {
+    margin-top: 0;
+  }
+  .uncompromising-quality {
+    margin-top: 19rem;
+  }
+  .uncompromising-quality::before {
+    height: 488px;
+
+    background-image: url(../assets/about/bg-quality-md.png);
+  }
+  .uncompromising-quality__img {
+    height: 320px;
+    width: calc(100vw - 12.5rem);
+    margin-inline: 3.75rem;
+
+    background-size: cover;
+  }
+  .uncompromising-quality .heading--2 {
+    margin: 0;
+    margin-top: -6rem;
+
+    font-size: 2rem;
+  }
+  .uncompromising-quality .p {
+    margin: 0;
+    margin-top: 1.5rem;
+    margin-inline: 4.625rem;
+
+    text-align: center;
+
+    opacity: 80%;
+  }
+  .headquarters {
+    justify-items: flex-start;
+
+    margin-top: 9rem;
+  }
+  .headquarters .heading--5 {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+  .headquarters__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    width: 100%;
+  }
+  .headquarters__list li {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    padding-top: 0;
+  }
+  .menu__backdrop {
+    padding-top: 2.75rem;
+  }
+  .about-us {
+    background-image: url(../assets/about/image-hero-whitecup-lg.jpg);
+  }
+  .about-us .heading--2 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+  .our-commitment {
+    align-content: center;
+    grid-column-gap: 7.8125rem;
+
+    padding-inline: 5.3125rem;
+  }
+  .our-commitment__img {
+    height: 520px;
+    width: 445px;
+
+    background-image: url(../assets/about/image-commitment-lg.jpg);
+  }
+  .our-commitment .heading--3 {
+    align-self: flex-end;
+  }
+  .our-commitment .p {
+    align-self: flex-start;
+
+    margin-top: 2rem;
+  }
+  .uncompromising-quality {
+    position: relative;
+  }
+  .uncompromising-quality::before {
+    height: 474px;
+
+    background-image: url(../assets/about/bg-quality-lg.png);
+  }
+  .uncompromising-quality__img {
+    position: absolute;
+    right: 40px;
+
+    height: 474px;
+    width: 445px;
+
+    background-image: url(../assets/about/image-quality-lg.jpg);
+
+    transform: translateY(-88px);
+  }
+  .uncompromising-quality .heading--2 {
+    max-width: 37vw;
+    margin-left: 5.5rem;
+    padding-top: 5.5rem;
+
+    font-size: 2.5rem;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-align: left;
+  }
+  .uncompromising-quality .p {
+    width: 58ch;
+    max-width: 32vw;
+    margin-top: 2rem;
+    margin-left: 5.5rem;
+
+    text-align: left;
+
+    opacity: 70%;
+  }
+  .headquarters.container {
+    --_container-max-width: 1045px;
+  }
+}

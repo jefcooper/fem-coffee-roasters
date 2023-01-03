@@ -1,0 +1,427 @@
+/************ Hero Section ***************/
+.hero {
+  display: grid;
+  align-content: center; /* vertically center everything so we have even top/bottom margin */
+  justify-items: center; /* horizontally align within grid */
+  gap: 1.5rem;
+
+  height: 500px;
+  margin-top: 2.5rem;
+  padding-inline: 1.5rem;
+  border-radius: 10px;
+
+  background-image: url(../assets/home/image-hero-coffeepress-sm.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  color: var(--clr-neutral-200);
+}
+.hero .p {
+  opacity: 80%;
+}
+.hero .btn {
+  margin-top: 1rem;
+}
+
+/************ Our Collection Section ***************/
+.our-collection {
+  margin-top: 7.5rem;
+}
+.our-collection__grid {
+  display: grid;
+  justify-items: center;
+}
+.our-collection__card {
+  display: grid;
+  justify-items: center;
+
+  margin-top: 1.5rem;
+}
+.our-collection img {
+  width: 200px;
+  margin-top: 3rem;
+}
+.our-collection img:first-of-type {
+  margin-top: 1rem;
+}
+.our-collection .p {
+  margin-top: 1rem;
+  margin-inline: 2rem;
+
+  text-align: center;
+}
+
+/************ Why Us Section ***************/
+.why-us {
+  position: relative;
+
+  margin-top: 7.5rem;
+
+  color: var(--clr-neutral-200);
+}
+.why-us::after {
+  position: absolute;
+  z-index: -1;
+  isolation: isolate;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 902px;
+  border-radius: 10px;
+
+  background-color: var(--clr-neutral-900);
+
+  content: "";
+}
+.why-us .heading--2 {
+  padding-top: 4rem;
+
+  text-align: center;
+}
+.why-us .p {
+  margin-top: 1rem;
+  padding-inline: 1.5rem;
+
+  text-align: center;
+
+  opacity: 80%;
+}
+.why-us__card {
+  display: grid;
+  align-content: flex-start;
+  justify-items: center;
+
+  height: 382px;
+  margin-inline: 1.5rem;
+  margin-top: 1.5rem;
+  padding-top: 4.5rem;
+  border-radius: 8px;
+
+  background-color: var(--clr-primary-400);
+}
+.why-us__card:first-of-type {
+  margin-top: 4rem;
+}
+.why-us__card .heading--5 {
+  margin-top: 3.5rem;
+
+  text-align: center;
+}
+
+/************ How It Works Section ***************/
+.how-it-works {
+  display: grid;
+  justify-items: center;
+
+  margin-top: 7.5rem;
+}
+.how-it-works__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+
+  counter-reset: how-it-works-item;
+}
+.how-it-works .heading--5 {
+  margin-bottom: 1.5rem;
+
+  color: var(--clr-neutral-700);
+  text-align: center;
+}
+.how-it-works .heading--4 {
+  width: 100%;
+
+  text-align: center;
+}
+.how-it-works .heading--4::before {
+  display: block;
+
+  margin-bottom: 1.5rem;
+  margin-top: 3.5rem;
+
+  font-size: 4.5rem;
+  font-family: var(--ff-display);
+  font-weight: var(--fw-black);
+  line-height: 1;
+  letter-spacing: 3.6px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+
+  color: var(--clr-accent-400);
+
+  counter-increment: how-it-works-item;
+  content: counter(how-it-works-item, decimal-leading-zero);
+}
+.how-it-works .btn {
+  margin-top: 5rem;
+}
+.how-it-works .p {
+  margin-top: 1.5rem;
+
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    justify-items: flex-start;
+
+    margin-top: 3.375rem;
+    padding-inline: 3.625rem;
+
+    background-image: url(../assets/home/image-hero-coffeepress-md.jpg);
+  }
+  .hero .heading--1 {
+    width: 60%;
+  }
+  .hero .p {
+    width: 65%;
+  }
+
+  .our-collection__grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    margin-inline: 3.626rem;
+    margin-top: -2.7rem;
+  }
+  .our-collection__card {
+    justify-items: flex-start;
+    gap: 1.5rem;
+
+    margin: 0;
+  }
+  .our-collection__card .p {
+    margin: 0;
+
+    text-align: left;
+  }
+  .why-us {
+    margin-top: 9rem;
+  }
+  .why-us::after {
+    height: 573px;
+  }
+  .why-us .heading--2 {
+    padding-top: 3.5rem;
+
+    font-size: 2rem;
+    line-height: 3.5rem;
+  }
+  .why-us .p {
+    padding-inline: 4.625rem;
+  }
+  .why-us__card {
+    display: grid;
+    align-items: center;
+    align-content: center;
+    grid-template-columns: 1fr 2fr;
+
+    height: 180px;
+    padding: 0;
+  }
+  .why-us__card:first-of-type {
+    margin-top: 4.375rem;
+  }
+  .why-us__card .heading--5 {
+    margin-top: 0;
+
+    text-align: left;
+  }
+  .why-us__card img {
+    width: 56px;
+  }
+  .why-us__card .p {
+    padding-inline: 0;
+
+    text-align: left;
+  }
+
+  .how-it-works {
+    justify-items: flex-start;
+
+    margin-top: 9rem;
+  }
+  .how-it-works .p {
+    text-align: left;
+  }
+  .how-it-works .heading--4 {
+    margin-bottom: 0.875rem;
+
+    text-align: left;
+  }
+  .how-it-works .heading--4::before {
+    margin-bottom: 2.625rem;
+    margin-top: 3rem;
+
+    text-align: left;
+  }
+  .how-it-works__list {
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 1.7rem;
+  }
+  .how-it-works .btn {
+    margin-top: 2.75rem;
+  }
+  .how-it-works__ball {
+    position: relative;
+    grid-row: 1 / 2;
+    justify-self: flex-start;
+
+    width: 100%;
+    height: 31px;
+  }
+  .how-it-works__ball::before {
+    position: absolute;
+
+    width: 31px;
+    height: 31px;
+    border: 2px solid var(--clr-primary-400);
+    border-radius: 50%;
+
+    background-color: var(--clr-neutral-200);
+
+    content: "";
+  }
+  .how-it-works__ball--1 {
+    grid-column: 1 / 2;
+  }
+  .how-it-works__ball--2 {
+    grid-column: 2 / 3;
+  }
+  .how-it-works__ball--3 {
+    grid-column: 3 / -1;
+
+    background-color: var(--clr-neutral-200);
+  }
+  .how-it-works__line {
+    position: relative;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+
+    width: 100%;
+    height: 31px;
+  }
+  .how-it-works__line::after {
+    position: absolute;
+    z-index: -1;
+    bottom: calc(50% - 1px);
+    left: 0;
+    right: 0;
+
+    height: 2px;
+
+    background-color: var(--clr-accent-400);
+
+    content: "";
+  }
+  .how-it-works .heading--5 {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    gap: 2rem;
+
+    height: 600px;
+    margin-top: 2.5rem;
+
+    background-image: url(../assets/home/image-hero-coffeepress-lg.jpg);
+  }
+  .hero .heading--1 {
+    width: 50%;
+  }
+  .hero .p {
+    width: 35%;
+  }
+  .our-collection__grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: column;
+
+    margin-top: -6rem;
+  }
+  .our-collection__card {
+    justify-items: center;
+  }
+  .our-collection__card .p {
+    margin-inline: 1rem;
+
+    text-align: center;
+  }
+  .why-us__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.875rem;
+
+    margin-inline: 5.3125rem;
+    margin-top: 5.375rem;
+  }
+  .why-us .heading--2 {
+    padding-top: 6.25rem;
+  }
+  .why-us::after {
+    height: 577px;
+  }
+  .why-us .p {
+    max-width: 74ch;
+    margin-top: 2rem;
+    margin-inline: auto;
+  }
+  .why-us__card {
+    grid-auto-flow: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 3.5rem;
+
+    height: 382px;
+    margin: 0;
+    padding: 3rem;
+  }
+  .why-us__card .heading--5 {
+    text-align: center;
+  }
+  .why-us__card .p {
+    margin: 0;
+    margin-top: 1.5rem;
+
+    text-align: center;
+  }
+  .why-us__card:first-of-type {
+    margin: 0;
+  }
+  .how-it-works {
+    margin-top: 12.5rem;
+    padding-inline: 5.3125rem;
+  }
+  .how-it-works__list {
+    justify-self: stretch;
+    justify-content: space-between;
+    justify-items: flex-start;
+    gap: 1.875rem;
+
+    margin-top: 5rem;
+  }
+  .how-it-works .heading--4 {
+    width: 10ch;
+
+    font-size: 2rem;
+  }
+  .how-it-works__list .heading--4::before {
+    margin: 0;
+    margin-top: 2.3125rem;
+    margin-bottom: 2.375rem;
+  }
+  .how-it-works__list .p {
+    width: 30ch;
+    margin-top: 0.75rem;
+  }
+  .how-it-works .btn {
+    margin-top: 4rem;
+  }
+}

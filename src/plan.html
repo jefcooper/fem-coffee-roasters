@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:opsz,wght@9..144,900&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/plan.css">
+  <script type="module" src="https://cdn.jsdelivr.net/npm/a11y-dialog@7/dist/a11y-dialog.min.js"></script>
+
+  <script src="script.js"></script>
+
+  <title>Frontend Mentor | Coffeeroasters subscription site</title>
+</head>
+
+<body>
+  <header class="header container">
+    <div class="menu__backdrop" onclick="closeMenu(event);">
+      <a href="/index.html">
+        <span class="visually-hidden">CoffeeRoasters home</span>
+        <svg class="icon-logo">
+          <use href="assets/images.svg#logo"></use>
+        </svg>
+      </a>
+      <nav class="nav menu" aria-labelledby="main-menu">
+        <h2 id="main-menu" class="visually-hidden">Main Site Navigation Menu</h2>
+        <button class="menu__toggle" type="button" aria-expanded="false" onclick="headerNavMenuClicked(event);">
+          <span class="visually-hidden">Menu</span>
+        </button>
+        <ul class="menu__options">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="about.html">About us</a>
+          </li>
+          <li>
+            <a href="#">Create your plan</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="create-a-plan container">
+      <h1 class="heading--1">
+        Create a plan
+      </h1>
+      <p class="p">
+        Build a subscription plan that best fits your needs. We offer an assortment of the best
+        artisan coffees from around the globe delivered fresh to your door.
+      </p>
+    </section>
+
+    <section class="plan-steps">
+      <div class="plan-steps__list">
+
+        <div class="plan-steps__line"></div>
+        <div class="plan-steps__ball plan-steps__ball--1"></div>
+        <h3 class="heading--4">Pick your coffee</h3>
+        <p class="p">
+          Select from our evolving range of artisan coffees. Our beans are ethically
+          sourced and we pay fair prices for them. There's new coffees in all profiles
+          every month for you to try out.
+        </p>
+
+        <div class="plan-steps__ball plan-steps__ball--2"></div>
+        <h3 class="heading--4">Choose the frequency</h3>
+        <p class="p">
+          Customize your order frequency, quantity, even your roast style and grind type.
+          Pause, skip or cancel your subscription with no commitment through our online portal.
+        </p>
+
+        <div class="plan-steps__ball plan-steps__ball--3"></div>
+        <h3 class="heading--4">Receive and enjoy!</h3>
+        <p class="p">
+          We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
+          world-class coffees curated to provide a distinct tasting experience.
+        </p>
+      </div>
+    </section>
+
+    <section class="plan container">
+
+      <aside class="plan__side-nav" aria-labelledby="plan__side-nav">
+        <h2 id="plan__side-nav" class="visually-hidden">Plan Steps</h2>
+        <ul class="heading--5">
+          <li data-category="format">Preferences</li>
+          <li data-category="type">Bean type</li>
+          <li data-category="quantity">Quantity</li>
+          <li data-category="grind">Grind option</li>
+          <li data-category="frequency">Deliveries</li>
+        </ul>
+      </aside>
+
+      <section class="plan__selections">
+        <ol>
+          <li>
+            <button class="accordion__toggle heading--2" type="button" aria-expanded="false"
+              onclick="accordionToggleClicked(event);" aria-controls="accordion-format">
+              <span>How do you drink your coffee?</span>
+              <img src="assets/plan/icon-arrow.svg" alt="down arrow">
+            </button>
+            <fieldset class="accordion" id="accordion-format" onclick="accordionOptionClicked(event);">
+              <legend class="visually-hidden">How do you drink your coffee?</legend>
+              <div class="focus-ring">
+                <input class="visually-hidden accordion__option-input" type="radio" name="format"
+                  id="plan-format--capsule" value="capsule">
+                <label class="accordion__option heading--5" for="plan-format--capsule">
+                  <span class="accordion__option-heading">Capsule</span>
+                  <span class="accordion__option-description p">
+                    Compatible with Nespresso systems and similar brewers
+                  </span>
+                </label>
+              </div>
+
+              <div class="focus-ring">
+                <input class="visually-hidden accordion__option-input" type="radio" name="format"
+                  id="plan-format--filter" value="filter">
+                <label class="accordion__option heading--5" for="plan-format--filter">
+                  <span class="accordion__option-heading">Filter</span>
+                  <span class="accordion__option-description p">
+                    For pour over or drip methods like Aeropress, Chemex, and V60
+                  </span>
+                </label>
+              </div>
+
+              <div class="focus-ring">
+                <input type="radio" name="format" id="plan-format--espresso"
+                  class="visually-hidden accordion__option-input" value="espresso">
+                <label for="plan-format--espresso" class="accordion__option heading--5">
+                  <span class="accordion__option-heading">Espresso</span>
+                  <span class="accordion__option-description p">
+                    Dense and finely ground beans for an intense, flavorful experience
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+          </li>
+
+          <li>
+            <button class="accordion__toggle heading--2" type="button" aria-expanded="false"
+              onclick="accordionToggleClicked(event);" aria-controls="accordion-type">
+              <span>What type of coffee?</span>
+              <img src="assets/plan/icon-arrow.svg" alt="down arrow">
+            </button>
+            <fieldset class="accordion" id="accordion-type" onclick="accordionOptionClicked(event);">
+              <legend class="visually-hidden">What type of coffee?</legend>
+              <div class="focus-ring">
+                <input type="radio" name="type" id="plan-type--single-origin"
+                  class="visually-hidden accordion__option-input" value="single-origin">
+                <label for="plan-type--single-origin" class="accordion__option heading--5">
+                  <span class="accordion__option-heading">Single origin</span>
+                  <span class="accordion__option-description p">
+                    Distinct, high quality coffee from a specific family-owned farm
+                  </span>
+                </label>
+              </div>
+
+              <div class="focus-ring">
+                <input type="radio" name="type" id="plan-type--decaf" value="decaf"
+                  class="visually-hidden accordion__option-input">
+                <label for="plan-type--decaf" class="accordion__option heading--5">
+                  <span class="accordion__option-heading">
+                    Decaf
+                  </span>
+                  <span class="accordion__option-description p">
+                    Just like regular coffee, except the caffeine has been removed
+                  </span>
+                </label>
+              </div>
+
+              <div class="focus-ring">
+                <input type="radio" name="type" id="plan-type--blended" value="blended"
+                  class="visually-hidden accordion__option-input">
+                <label for="plan-type--blended" class="accordion__option heading--5">
+                  <span class="accordion__option-heading">
+                    Blended
+                  </span>
+                  <span class="accordion__option-description p">
+                    Combination of two or three dark roasted beans of organic coffees
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+          </li>
+
+          <li>
+            <button class="accordion__toggle heading--2" type="button" aria-expanded="false"
+              onclick="accordionToggleClicked(event);" aria-controls="accordion-quantity">
+              <span>How much would you like?</span>
+              <img src="assets/plan/icon-arrow.svg" alt="down arrow">
+            </button>
+            <fieldset class="accordion" id="accordion-quantity" onclick="accordionOptionClicked(event);">
+
+              <legend class="visually-hidden">How much would you like?</legend>
+
+              <div class="focus-ring">
+                <input type="radio" name="quantity" id="plan-quantity--250g"
+                  class="visually-hidden accordion__option-input" value="250g">
+                <label for="plan-quantity--250g" class="accordion__option heading--5">
+                  <span class="accordion__option-heading">
+                    250g
+                  </span>
+                  <span class="accordion__option-description p">
+                    Perfect for the solo drinker. Yields about 12 delicious cups.
+                  </span>
+                </label>
+              </div>
+
+              <div class="focus-ring">
+                <input type="radio" name="quantity" id="plan-quantity--500g"
+                  class="visually-hidden accordion__option-input" value="500g">
+                <label for="plan-quantity--500g" class="accordion__option heading--5">
+                  <span class="accordion__option-heading">
+                    500g
+                  </span>
+                  <span class="accordion__option-description p">
+                    Perfect option for a couple. Yields about 40 delectable cups.
+                  </span>
+                </label>
+              </div>
+
+              <div class="focus-ring">
+                <input type="radio" name="quantity" id="plan-quantity--1000g"
+                  class="visually-hidden accordion__option-input" value="1000g">
+                <label for="plan-quantity--1000g" class="accordion__option heading--5">
+                  <span class="accordion__option-heading">
+                    1000g
+                  </span>
+                  <span class="accordion__option-description p">
+                    Perfect for offices and events. Yields about 90 delightful cups.
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+          </li>
+
+          <li>
+            <button class="accordion__toggle heading--2" type="button" aria-expanded="false"
+              onclick="accordionToggleClicked(event);" aria-controls="accordion-grind">
+              <span>Want us to grind them?</span>
+              <img src="assets/plan/icon-arrow.svg" alt="down arrow">
+            </button>
+            <fieldset class="accordion" id="accordion-grind" onclick="accordionOptionClicked(event);">
+              <legend class="visually-hidden">Want us to grind them?</legend>
+
+              <div class="focus-ring">
+                <input type="radio" name="grind" id="plan-grind--wholebean"
+                  class="visually-hidden accordion__option-input" value="wholebean">
+                <label for="plan-grind--wholebean" class="accordion__option heading--5">
+                  <span class="accordion__option-heading">
+                    Wholebean
+                  </span>
+                  <span class="accordion__option-description p">
+                    Best choice if you cherish the full sensory experience
+                  </span>
+                </label>
+              </div>
+
+              <div class="focus-ring">
+                <input type="radio" name="grind" id="plan-grind--filter" class="visually-hidden accordion__option-input"
+                  value="filter">
+                <label for="plan-grind--filter" class="accordion__option heading--5">
+                  <span class="accordion__option-heading">
+                    Filter
+                  </span>
+                  <span class="accordion__option-description p">
+                    For drip or pour-over coffee methods such as V60 or Aeropress
+                  </span>
+                </label>
+              </div>
+
+              <div class="focus-ring">
+                <input type="radio" name="grind" id="plan-grind--cafetiere"
+                  class="visually-hidden accordion__option-input" value="cafetiere">
+                <label for="plan-grind--cafetiere" class="accordion__option heading--5">
+                  <span class="accordion__option-heading">
+                    Cafetiére
+                  </span>
+                  <span class="accordion__option-description p">
+                    Course ground beans specially suited for french press coffee
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+          </li>
+
+          <li>
+            <button class="accordion__toggle heading--2" type="button" aria-expanded="false"
+              onclick="accordionToggleClicked(event);" aria-controls="accordion-frequency">
+              <span>How often should we deliver?</span>
+              <img src="assets/plan/icon-arrow.svg" alt="down arrow">
+            </button>
+            <fieldset class="accordion" id="accordion-frequency" onclick="accordionOptionClicked(event);">
+              <legend class="visually-hidden">How often should we deliver?</legend>
+
+              <div class="focus-ring">
+                <input type="radio" name="frequency" id="plan-frequency--weekly"
+                  class="visually-hidden accordion__option-input" value="weekly">
+                <label for="plan-frequency--weekly" class="accordion__option heading--5">
+                  <span class="accordion__option-heading">
+                    Every week
+                  </span>
+                  <span class="accordion__option-description p">
+                    $14.00 per shipment. Includes free first-class shipping.
+                  </span>
+                </label>
+              </div>
+
+              <div class="focus-ring">
+                <input type="radio" name="frequency" id="plan-frequency--biweekly"
+                  class="visually-hidden accordion__option-input" value="biweekly">
+                <label for="plan-frequency--biweekly" class="accordion__option heading--5">
+                  <span class="accordion__option-heading">
+                    Every 2 weeks
+                  </span>
+                  <span class="accordion__option-description p">
+                    $17.25 per shipment. Includes free priority shipping.
+                  </span>
+                </label>
+              </div>
+
+              <div class="focus-ring">
+                <input type="radio" name="frequency" id="plan-frequency--monthly"
+                  class="visually-hidden accordion__option-input" value="monthly">
+                <label for="plan-frequency--monthly" class="accordion__option heading--5">
+                  <span class="accordion__option-heading">
+                    Every month
+                  </span>
+                  <span class="accordion__option-description p">
+                    $22.50 per shipment. Includes free priority shipping.
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+          </li>
+        </ol>
+
+        <div class="order__card">
+          <h2 class="order__heading">
+            Order Summary
+          </h2>
+          <p class="order" id="order-text">
+            “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
+            sent to me _____.”
+          </p>
+
+        </div>
+        <button type="button" class="btn" id="plan__order-submit" disabled data-a11y-dialog-show="order-confirmation">
+          Create my plan!
+        </button>
+      </section>
+
+      <section class="order-confirmation" aria-hidden="true" data-a11y-dialog="order-confirmation">
+        <div class="order-confirmation__overlay" data-a11y-dialog-hide></div>
+        <div class="order-confirmation__form" role="document">
+          <!-- Modal -->
+          <h2 class="order-confirmation__heading">
+            <span>Order Summary</span>
+            <span data-a11y-dialog-hide>
+              <svg class="icon--close">
+                <use href="assets/images.svg#icon-close"></use>
+              </svg>
+            </span>
+          </h2>
+
+          <p class="order" id="order-confirmation-text">
+            “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
+            sent to me _____.”
+          </p>
+
+          <p class="p">
+            Is this correct? You can proceed to checkout or go back to plan selection if something
+            is off. Subscription discount codes can also be redeemed at the checkout.
+          </p>
+
+          <div class="order-confirmation__submit">
+            <h3 class="heading--3 order-confirmation__form-price order-confirmation__price">
+              $_____/month
+            </h3>
+
+            <button type="button" class="btn" data-a11y-dialog-hide>
+              Checkout
+              <span class="order-confirmation__button-price order-confirmation__price"> - $_____/month</span>
+            </button>
+          </div>
+        </div>
+        <!-- End modal -->
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <a href="/index.html">
+      <span class="visually-hidden">CoffeeRoasters Home</span>
+      <svg class="icon-logo icon-logo--white">
+        <use href="assets/images.svg#logo"></use>
+      </svg>
+    </a>
+    <nav class="nav menu" aria-labelledby="footer-menu">
+      <h2 id="footer-menu" class="visually-hidden">Footer Site Navigation</h2>
+      <ul class="menu__options">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="about.html">About us</a>
+        </li>
+        <li>
+          <a href="#">Create your plan</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="footer__social">
+      <a href="http://facebook.com">
+        <span class="visually-hidden">Facebook Link</span>
+        <svg class="footer__social-icon">
+          <use href="assets/images.svg#icon-facebook"></use>
+        </svg>
+      </a>
+      <a href="https://twitter.com">
+        <span class="visually-hidden">Twitter Link</span>
+        <svg class="footer__social-icon">
+          <use href="assets/images.svg#icon-twitter"></use>
+        </svg>
+      </a>
+      <a href="https://instagram.com">
+        <span class="visually-hidden">Instagram Link</span>
+        <svg class="footer__social-icon">
+          <use href="assets/images.svg#icon-instagram"></use>
+        </svg>
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>

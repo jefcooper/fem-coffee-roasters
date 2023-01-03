@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:opsz,wght@9..144,900&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/home.css">
+  <script src="script.js" defer></script>
+
+  <title>Frontend Mentor | Coffeeroasters subscription site</title>
+  <meta name="description" content="Coffeeroasters subscription purchase coffee online Frontend Mentor Challenge">
+</head>
+
+<body>
+  <header class="header container">
+    <div class="menu__backdrop" onclick="closeMenu(event);">
+      <a href="/index.html">
+        <span class="visually-hidden">CoffeeRoasters home</span>
+        <svg class="icon-logo">
+          <use href="assets/images.svg#logo"></use>
+        </svg>
+      </a>
+      <nav class="nav menu" aria-labelledby="main-menu">
+        <h2 id="main-menu" class="visually-hidden">Main Site Navigation Menu</h2>
+        <button class="menu__toggle" type="button" aria-expanded="false" onclick="headerNavMenuClicked(event);">
+          <span class="visually-hidden">Menu</span>
+        </button>
+        <ul class="menu__options">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="about.html">About us</a>
+          </li>
+          <li>
+            <a href="plan.html">Create your plan</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <section class="hero container">
+      <h1 class="heading--1">
+        Great coffee made simple.
+      </h1>
+
+      <p class="p">
+        Start your mornings with the world’s best coffees. Try our expertly curated artisan
+        coffees from our best roasters delivered directly to your door, at your schedule.
+      </p>
+
+      <form action="plan.html">
+        <button type="submit" class="btn">Create your plan</button>
+      </form>
+    </section>
+
+    <section class="our-collection container">
+      <h2 class="title--1">
+        Our collection
+      </h2>
+
+      <div class="our-collection__grid">
+        <img src="assets/home/image-gran-espresso.png" alt="">
+
+        <div class="our-collection__card">
+          <h3 class="heading--5">
+            Gran Espresso
+          </h3>
+          <p class="p">
+            Light and flavorful blend with cocoa and black pepper for an intense experience
+          </p>
+        </div>
+
+        <img src="assets/home/image-planalto.png" alt="">
+
+        <div class="our-collection__card">
+          <h3 class="heading--5">
+            Planalto
+          </h3>
+          <p class="p">
+            Brazilian dark roast with rich and velvety body, and hints of fruits and nuts
+          </p>
+        </div>
+
+        <img src="assets/home/image-piccollo.png" alt="">
+
+        <div class="our-collection__card">
+          <h3 class="heading--5">
+            Piccollo
+          </h3>
+          <p class="p">
+            Mild and smooth blend featuring notes of toasted almond and dried cherry
+          </p>
+        </div>
+
+        <img src="assets/home/image-danche.png" alt="">
+
+        <div class="our-collection__card">
+          <h3 class="heading--5">
+            Danche
+          </h3>
+          <p class="p">
+            Ethiopian hand-harvested blend densely packed with vibrant fruit notes
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-us container">
+      <h2 class="heading--2">
+        Why choose us?
+      </h2>
+
+      <p class="p">
+        A large part of our role is choosing which particular coffees will be featured
+        in our range. This means working closely with the best coffee growers to give
+        you a more impactful experience on every level.
+      </p>
+
+      <div class="why-us__grid">
+        <div class="why-us__card">
+          <img src="assets/home/icon-coffee-bean.svg" alt="">
+          <div class="why-us__card-content">
+            <h3 class="heading--5">
+              Best quality
+            </h3>
+            <p class="p">
+              Discover an endless variety of the world’s best artisan coffee from each of our roasters.
+            </p>
+          </div>
+        </div>
+
+        <div class="why-us__card">
+          <img src="assets/home/icon-gift.svg" alt="">
+          <div class="why-us__card-content">
+            <h3 class="heading--5">
+              Exclusive benefits
+            </h3>
+            <p class="p">
+              Special offers and swag when you subscribe, including 30% off your first shipment.
+            </p>
+          </div>
+        </div>
+
+        <div class="why-us__card">
+          <img src="assets/home/icon-truck.svg" alt="">
+          <div class="why-us__card-content">
+            <h3 class="heading--5">
+              Free shipping
+            </h3>
+            <p class="p">
+              We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works container">
+      <h2 class="heading--5">
+        How it works
+      </h2>
+
+      <div class="how-it-works__list">
+        <div class="how-it-works__line"></div>
+        <div class="how-it-works__ball how-it-works__ball--1"></div>
+        <h3 class="heading--4">Pick your coffee</h3>
+        <p class="p">
+          Select from our evolving range of artisan coffees. Our beans are ethically
+          sourced and we pay fair prices for them. There are new coffees in all profiles
+          every month for you to try out.
+        </p>
+
+
+        <div class="how-it-works__ball how-it-works__ball--2"></div>
+        <h3 class="heading--4">Choose the frequency</h3>
+        <p class="p">
+          Customize your order frequency, quantity, even your roast style and grind type.
+          Pause, skip or cancel your subscription with no commitment through our online portal.
+        </p>
+
+        <div class="how-it-works__ball how-it-works__ball--3"></div>
+        <h3 class="heading--4">Receive and enjoy!</h3>
+        <p class="p">
+          We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
+          world-class coffees curated to provide a distinct tasting experience.
+        </p>
+      </div>
+
+      <form action="plan.html">
+        <button type="submit" class="btn">Create your plan</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer container">
+    <a href="/index.html">
+      <span class="visually-hidden">CoffeeRoasters Home</span>
+      <svg class="icon-logo icon-logo--white">
+        <use href="assets/images.svg#logo"></use>
+      </svg>
+    </a>
+    <nav class="nav menu" aria-labelledby="footer-menu">
+      <h2 id="footer-menu" class="visually-hidden">Footer Site Navigation</h2>
+      <ul class="menu__options">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="about.html">About us</a>
+        </li>
+        <li>
+          <a href="plan.html">Create your plan</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="footer__social">
+      <a href="http://facebook.com">
+        <span class="visually-hidden">Facebook Link</span>
+        <svg class="footer__social-icon">
+          <use href="assets/images.svg#icon-facebook"></use>
+        </svg>
+      </a>
+      <a href="https://twitter.com">
+        <span class="visually-hidden">Twitter Link</span>
+        <svg class="footer__social-icon">
+          <use href="assets/images.svg#icon-twitter"></use>
+        </svg>
+      </a>
+      <a href="https://instagram.com">
+        <span class="visually-hidden">Instagram Link</span>
+        <svg class="footer__social-icon">
+          <use href="assets/images.svg#icon-instagram"></use>
+        </svg>
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>

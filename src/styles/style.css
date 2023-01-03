@@ -1,0 +1,546 @@
+:root {
+  --clr-primary-200: hsl(178, 55%, 61%);
+  --clr-primary-400: hsl(179, 81%, 29%);
+
+  --clr-accent-400: hsl(25, 94%, 86%);
+
+  --clr-neutral-100: hsl(43, 0%, 100%);
+  --clr-neutral-200: hsl(43, 78%, 98%);
+  --clr-neutral-300: hsl(40, 29%, 94%);
+  --clr-neutral-400: hsl(26, 11%, 87%);
+  --clr-neutral-700: hsl(215, 5%, 54%);
+  --clr-neutral-900: hsl(215, 19%, 25%);
+  --clr-gradient-title--1: hsla(43, 78%, 98%, 0) 0%, hsl(43, 78%, 98%) 100%;
+
+  --ff-base: "Barlow", sans-serif;
+  --ff-display: "Fraunces", serif;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fw-black: 900;
+}
+
+/********************************************************
+  CSS Resets
+ ********************************************************/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+a,
+button,
+body {
+  margin: 0;
+  padding: 0;
+
+  font: inherit;
+}
+ul,
+ol {
+  list-style: none;
+}
+li {
+  color: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/********************************************************
+  Fonts
+ ********************************************************/
+.title--1 {
+  font-size: 2.5rem;
+  font-family: var(--ff-display);
+  font-weight: var(--fw-black);
+  font-style: normal;
+  line-height: 4.5rem;
+  letter-spacing: 0.6px;
+  text-decoration: none;
+  text-transform: lowercase;
+  text-align: center;
+
+  background: linear-gradient(hsl(43, 0%, 60%), hsl(43, 0%, 96%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.heading--1 {
+  font-size: 2.5rem;
+  font-family: var(--ff-display);
+  font-weight: var(--fw-black);
+  font-style: normal;
+  line-height: 2.5rem;
+  letter-spacing: 0.7px;
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+}
+.heading--2 {
+  font-size: 1.75rem;
+  font-family: var(--ff-display);
+  font-weight: var(--fw-black);
+  font-style: normal;
+  line-height: 1.75rem;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  text-transform: none;
+}
+.heading--3 {
+  font-size: 2rem;
+  font-family: var(--ff-display);
+  font-weight: var(--fw-black);
+  font-style: normal;
+  line-height: 3rem;
+  letter-spacing: 0.4px;
+  text-decoration: none;
+  text-transform: none;
+}
+.heading--4 {
+  font-size: 1.75rem;
+  font-family: var(--ff-display);
+  font-weight: var(--fw-black);
+  font-style: normal;
+  line-height: 2rem;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  text-transform: none;
+}
+.heading--5 {
+  font-size: 1.5rem;
+  font-family: var(--ff-display);
+  font-weight: var(--fw-black);
+  font-style: normal;
+  line-height: 2rem;
+  letter-spacing: 0.17px;
+  text-decoration: none;
+  text-transform: none;
+}
+.heading--6 {
+  font-size: 1.5rem;
+  font-family: var(--ff-display);
+  font-weight: var(--fw-black);
+  font-style: normal;
+  line-height: 1.75rem;
+  letter-spacing: 0.17px;
+  text-decoration: none;
+  text-transform: none;
+}
+.btn {
+  font-size: 1.125rem;
+  font-family: var(--ff-display);
+  font-weight: var(--fw-black);
+  font-style: normal;
+  line-height: 1.5625rem;
+  letter-spacing: 0.1px;
+  text-decoration: none;
+  text-transform: none;
+}
+.p {
+  font-size: 0.938rem;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-style: normal;
+  line-height: 1.5625rem;
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+}
+.menu {
+  font-size: 0.75rem;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-bold);
+  font-style: normal;
+  line-height: 0.9375rem;
+  letter-spacing: 0.92px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.order {
+  font-size: 1.5rem;
+  font-family: var(--ff-display);
+  font-weight: var(--fw-black);
+  font-style: normal;
+  line-height: 2.5rem;
+  letter-spacing: 0.17px;
+  text-decoration: none;
+  text-transform: none;
+}
+.order__heading {
+  font-size: 0.938rem;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-style: normal;
+  line-height: 1.5625rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Tablet Font Variants */
+@media screen and (min-width: 768px) {
+  .title--1 {
+    font-size: 6rem;
+    line-height: 4.5rem;
+    letter-spacing: 7.6px;
+  }
+  .heading--1 {
+    font-size: 3rem;
+    line-height: 3rem;
+    letter-spacing: 1.05px;
+    text-align: left;
+  }
+  .p {
+    text-align: left;
+  }
+}
+
+/* Desktop Font Variants */
+@media screen and (min-width: 1024px) {
+  .title--1 {
+    font-size: 9.375rem;
+    line-height: 1;
+    letter-spacing: 14.2px;
+  }
+  .heading--1 {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    letter-spacing: 3.6px;
+  }
+  .heading--2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    letter-spacing: 0.6px;
+  }
+  .heading--3 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+    letter-spacing: 0.4px;
+  }
+  .p {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+}
+
+/********************************************************
+  Structure
+ ********************************************************/
+
+/*----------------------------------------------------------
+  container
+
+    constrain the maximum width on desktop and add a margin
+    when within the max-width.
+------------------------------------------------------------*/
+.container {
+  --_container-margin: 1.5rem; /* mobile is default */
+  --_container-max-width: 1280px; /* desktop max width */
+
+  max-width: var(--_container-max-width);
+  margin-inline: max(
+    50vw - var(--_container-max-width) / 2,
+    var(--_container-margin)
+  );
+}
+
+body {
+  font-size: 0.938rem;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  line-height: 1.5625rem;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+
+  background-color: var(--clr-neutral-200);
+  color: var(--clr-neutral-900);
+}
+
+.icon-logo {
+  width: 237px;
+  height: 27px;
+
+  fill: var(--clr-neutral-900);
+  zoom: 70%;
+
+  user-select: none;
+  cursor: pointer;
+}
+.icon-logo--white {
+  fill: var(--clr-neutral-100);
+}
+
+/************ Header ***************/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body.modal .header {
+  /* because modal menu__backdrop is absolute a gap closes up,
+     this will fill the gap so main section does not shift.
+   */
+  height: 3.7rem;
+}
+.header img {
+  display: inline-block;
+
+  height: fit-content;
+
+  zoom: 0.6878;
+}
+.menu__toggle {
+  border: 0;
+
+  user-select: none;
+  cursor: pointer;
+}
+.menu__toggle::before {
+  content: url(../assets/icon-hamburger.svg);
+}
+.menu__toggle[data-state="open"]::before {
+  content: url(../assets/icon-close.svg);
+}
+.menu__options {
+  display: none;
+
+  color: var(--clr-neutral-700);
+}
+.menu__toggle[data-state="open"] ~ .menu__options {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  justify-content: center;
+  gap: 2rem;
+
+  width: calc(100vw - 3rem);
+  margin-top: 8.75rem;
+
+  font-size: 1.5rem;
+  font-family: var(--ff-display);
+  line-height: 2rem;
+  text-align: center;
+  text-transform: capitalize;
+
+  color: var(--clr-neutral-900);
+}
+.menu__backdrop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  padding-top: 2rem;
+}
+.menu {
+  display: grid;
+  justify-items: flex-end;
+
+  text-align: right;
+}
+body.modal .menu__backdrop {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  z-index: 100;
+
+  inset: 0;
+  padding-inline: 1.5rem;
+
+  background-image: linear-gradient(
+    var(--clr-neutral-200) 40%,
+    hsl(43 78% 98% / 10%)
+  );
+}
+
+/************ Footer ***************/
+.footer {
+  display: grid;
+  justify-content: center;
+
+  margin-top: 7.5rem;
+  margin-bottom: 4.5rem;
+  padding: 3.375rem;
+
+  color: var(--clr-neutral-200);
+  background-color: var(--clr-neutral-900);
+  text-align: center;
+}
+.footer .menu {
+  justify-items: center;
+
+  margin-top: 3rem;
+
+  text-align: center;
+}
+.footer a {
+  color: var(--clr-neutral-700);
+}
+.footer a:is(:focus, :hover) {
+  color: var(--clr-neutral-100);
+}
+.footer .menu__options {
+  display: grid;
+  gap: 1.5rem;
+}
+.footer__social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+
+  margin-top: 3rem;
+}
+.footer__social-icon {
+  width: 24px;
+  height: 24px;
+
+  cursor: pointer;
+}
+.footer__social-icon {
+  fill: var(--clr-neutral-100);
+}
+.footer__social-icon:is(:focus, :hover) {
+  fill: var(--clr-accent-400);
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    --_container-margin: 2.5rem; /* tablet */
+  }
+  .icon-logo {
+    zoom: 100%;
+  }
+  .header img {
+    zoom: 1;
+  }
+  .menu__toggle {
+    display: none;
+  }
+  .menu__options {
+    display: flex;
+    gap: 2rem;
+  }
+  .footer {
+    justify-content: space-around;
+    justify-items: center;
+
+    margin-bottom: 4.5rem;
+  }
+  .footer .menu {
+    margin-top: 2rem;
+  }
+  .footer .menu__options {
+    grid-template-columns: repeat(3, auto);
+    justify-items: flex-start;
+    gap: 2rem;
+  }
+  .footer__social {
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    padding-top: 2.5rem;
+  }
+  .footer {
+    display: flex;
+    align-items: center;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, auto);
+  }
+  .footer__social {
+    margin: 0;
+    margin-left: auto;
+  }
+  .footer .menu {
+    margin-block: 0;
+    margin-left: 10rem;
+  }
+  .footer .menu__options {
+    justify-content: stretch;
+
+    height: fit-content;
+  }
+  .footer__social img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/********************************************************
+  Components
+ ********************************************************/
+.btn {
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  outline: 0;
+  border: 0;
+  border-radius: 6px;
+
+  background-color: var(--clr-primary-400);
+
+  color: var(--clr-neutral-200);
+
+  cursor: pointer;
+}
+.btn:is(:focus, :hover) {
+  background-color: var(--clr-primary-200);
+}
+.btn[disabled] {
+  background-color: var(--clr-neutral-400);
+}
+.btn[disabled]:is(:focus, :hover) {
+  background-color: var(--clr-neutral-400);
+}
+
+/********************************************************
+  Utilities 
+ ********************************************************/
+
+/*----------------------------------------------------------
+  visually-hidden (aka sr-only)
+
+    leave display alone and alter other properties to make
+    semantically relevant elements disappear from the layout
+    as seen by sighted users.
+------------------------------------------------------------*/
+.visually-hidden {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important; /* 2 */
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+/*----------------------------------------------------------
+  modal
+
+    Prevent scrolling when a modal menu or dialog is displayed
+    by attaching the modal class to the body element.
+------------------------------------------------------------*/
+.modal {
+  overflow: hidden;
+}
